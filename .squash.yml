@@ -1,6 +1,6 @@
 deployments:
   default:
-    dockerimage: ubuntu
+    dockerimage: ubuntu:latest
     port_forwarding: 80:3000
     copy_files:
       - ~/.ssh/id_rsa ~/code/id_rsa
