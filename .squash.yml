@@ -45,6 +45,7 @@ deployments:
     auto_deploy_post_launch_commands:
       - cd /code/frontend
       - HOSTNAME=$SQUASH_DOMAIN xvfb-run testcafe --skip-js-errors firefox test.js
-      - HOSTNAME=$SQUASH_DOMAIN bash -c 'xvfb-run testcafe --skip-js-errors chrome test.js'
+      - sleep 5
+      - HOSTNAME=$SQUASH_DOMAIN xvfb-run testcafe --skip-js-errors chrome test.js
     subdomain_port_mapping:
       - api:4567
